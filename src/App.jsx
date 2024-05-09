@@ -15,19 +15,50 @@ function App() {
       </header>
 
         <div className="post">
-          <img src="https://media.wired.com/photos/663a73d25701544accfd071e/master/w_2240,c_limit/Met-Gala-AI_AI-Generated.jpg" alt="" />
-          <h2>Met Gala Deepfakes Are Flooding Social Media</h2>
-          <p>The Met Gala is undoubtedly one of the most anticipated events of the year, but this time the music and entertainment celebrities who graced its red carpet had some competition for the public's attention</p>
+          <div className="image">
+            <img src="https://assets-global.website-files.com/614716f50b4f49202fdd0087/6229b0f7cf6b6325a4f9ac6d_shopify-review-shopify-ecommerce-platform%20(1).jpg" alt="" />
+          </div>
+          <div className="texts">
+            <h2>Shopify shares plunge 18% on weak guidance</h2>
+            <p className="info">
+              <a className='author' href="">John Doe</a>
+              <time datetime="2024-05-08 21:45">2024-05-08 21:45</time>
+            </p>
+            <p className='summary'>
+              Shopify shares tumbled 18% on Wednesday, shaving almost $20 billion off the company’s value, after the company gave revenue and profit guidance for the current quarter that spooked investors.
+            </p>
+          </div>
+        </div>
+
+        <div className="post">
+          <div className="image">
+            <img src="https://assets-global.website-files.com/614716f50b4f49202fdd0087/6229b0f7cf6b6325a4f9ac6d_shopify-review-shopify-ecommerce-platform%20(1).jpg" alt="" />
+          </div>
+          <div className="texts">
+            <h2>Shopify shares plunge 18% on weak guidance</h2>
+            <p className="info">
+              <a className='author' href="">John Doe</a>
+              <time datetime="2024-05-08 21:45">2024-05-08 21:45</time>
+            </p>
+            <p className='summary'>
+              Shopify shares tumbled 18% on Wednesday, shaving almost $20 billion off the company’s value, after the company gave revenue and profit guidance for the current quarter that spooked investors.
+            </p>
+          </div>
         </div>
         <div className="post">
-          <img src="https://media.wired.com/photos/663a73d25701544accfd071e/master/w_2240,c_limit/Met-Gala-AI_AI-Generated.jpg" alt="" />
-          <h2>Met Gala Deepfakes Are Flooding Social Media</h2>
-          <p>The Met Gala is undoubtedly one of the most anticipated events of the year, but this time the music and entertainment celebrities who graced its red carpet had some competition for the public's attention</p>
-        </div>
-        <div className="post">
-          <img src="https://media.wired.com/photos/663a73d25701544accfd071e/master/w_2240,c_limit/Met-Gala-AI_AI-Generated.jpg" alt="" />
-          <h2>Met Gala Deepfakes Are Flooding Social Media</h2>
-          <p>The Met Gala is undoubtedly one of the most anticipated events of the year, but this time the music and entertainment celebrities who graced its red carpet had some competition for the public's attention</p>
+          <div className="image">
+            <img src="https://assets-global.website-files.com/614716f50b4f49202fdd0087/6229b0f7cf6b6325a4f9ac6d_shopify-review-shopify-ecommerce-platform%20(1).jpg" alt="" />
+          </div>
+          <div className="texts">
+            <h2>Shopify shares plunge 18% on weak guidance</h2>
+            <p className="info">
+              <a className='author' href="">John Doe</a>
+              <time datetime="2024-05-08 21:45">2024-05-08 21:45</time>
+            </p>
+            <p className='summary'>
+              Shopify shares tumbled 18% on Wednesday, shaving almost $20 billion off the company’s value, after the company gave revenue and profit guidance for the current quarter that spooked investors.
+            </p>
+          </div>
         </div>
     </main>
   )
