@@ -15,6 +15,8 @@ function App() {
       </header>
 
       <Post/>
+      <Post/>
+      <Post/> 
     </main>
   )
 }
