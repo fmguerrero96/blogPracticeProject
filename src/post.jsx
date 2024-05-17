@@ -8,7 +8,7 @@ export default function Post () {
             <h2>Shopify shares plunge 18% on weak guidance</h2>
             <p className="info">
               <a className='author' href="">John Doe</a>
-              <time datetime="2024-05-08 21:45">2024-05-08 21:45</time>
+              <time dateTime="2024-05-08 21:45">2024-05-08 21:45</time>
             </p>
             <p className='summary'>
               Shopify shares tumbled 18% on Wednesday, shaving almost $20 billion off the company’s value, after the company gave revenue and profit guidance for the current quarter that spooked investors.
