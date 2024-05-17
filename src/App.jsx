@@ -1,18 +1,28 @@
 import { useState } from 'react'
 import './App.css'
 import Post from './Post'
-import Header from './header'
+import Header from './Header'
+import {Route, Routes} from "react-router-dom"
 
 function App() {
 
   return (
-    <main>
-      <Header/>
+    <Routes>
+      <Route index element={
+        <main>
+          <Header/>
+    
+          <Post/>
+          <Post/>
+          <Post/> 
+        </main>
+      } />
 
-      <Post/>
-      <Post/>
-      <Post/> 
-    </main>
+      <Route path={'/login'} element={
+        <div>login page</div>
+      } />
+    </Routes>
+    
   )
 }
 
