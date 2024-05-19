@@ -4,12 +4,12 @@ export default function RegisterPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    async function register(e){
-        e.preventDefualt()
+    const register = async function(e) {
+        e.preventDefault();
         await fetch('http://localhost:4000/register', {
             method: 'POST',
-            body: JSON.stringify({username, password}),
             headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({username, password}),
         })
     }
 
@@ -18,7 +18,7 @@ export default function RegisterPage() {
             <h1>Register</h1>
             <input type="text" placeholder="username" 
                 value={username} 
-                onChange={ev => setUsername(ev.target.value)}/>
+                onChange={e => setUsername(e.target.value)}/>
             <input type="password" placeholder="password" 
                 value={password} 
                 onChange={e => setPassword(e.target.value)} />
