@@ -3,14 +3,27 @@ import 'react-quill/dist/quill.snow.css';
 import { useState } from 'react';
 
 export default function CreatePost(){
-    const [value, setValue] = useState('');
+    const [content, setContent] = useState('');
+    const [title, setTitle] = useState('');
+    const [summary, setSummary] = useState('');
+    
     return(
         <form>
-            <input type="text" placeholder="Title" />
-            <input type="text" placeholder="Summary" />
+            <input type="text" 
+                placeholder="Title"
+                value={title} 
+                onChange={e => setTitle(e.target.value)} />
+            <input type="text" 
+                placeholder="Summary"
+                value={summary}
+                onChange={e =>setSummary(e.target.value)} />
             <input type="file" />
-            <ReactQuill theme="snow" value={value} onChange={setValue} />;
-            <button>Create Post</button>
+            <ReactQuill theme="snow" 
+                value={content} 
+                onChange={newValue => setContent(newValue)}
+                modules={modules}
+                formats={formats} />
+            <button style={{marginTop: '5px'}}>Create Post</button>
         </form>
     )
 }
