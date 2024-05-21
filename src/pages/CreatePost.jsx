@@ -10,6 +10,7 @@ export default function CreatePost(){
             <input type="text" placeholder="Summary" />
             <input type="file" />
             <ReactQuill theme="snow" value={value} onChange={setValue} />;
+            <button>Create Post</button>
         </form>
     )
 }
