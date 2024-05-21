@@ -22,7 +22,8 @@ export default function Header() {
         })
         setUserInfo(null)
     }
-
+    
+    //optional chaining operator '?'
     const username = userInfo?.username
 
     return(
