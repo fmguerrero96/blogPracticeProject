@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 export default function Header() {
     const [username, setUsername] = useState('')
+
     useEffect(() => {
         fetch('http://localhost:4000/profile', {
             credentials: 'include'
@@ -13,6 +14,14 @@ export default function Header() {
         })
     }, []);
 
+    const logout = function() {
+        fetch('http://localhost:4000/logout', {
+            credentials: 'include',
+            method: 'POST',
+        })
+        setUsername('')
+    }
+
     return(
         <header>
             <Link to={'/'} className='logo'>MyBlog</Link>
@@ -20,7 +29,7 @@ export default function Header() {
                 {username && (
                     <>
                         <Link to={'/create'}>Create new post</Link>
-                        <a>Logout</a>
+                        <a onClick={logout}>Logout</a>
                     </>
                 )}
                 {!username && (
