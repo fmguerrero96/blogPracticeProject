@@ -1,7 +1,10 @@
 export default function CreatePost(){
     return(
-        <div>
-            crete new post page
-        </div>
+        <form>
+            <input type="text" placeholder="Title" />
+            <input type="text" placeholder="Summary" />
+            <input type="file" />
+            <textarea name=" " id=""></textarea>
+        </form>
     )
 }
