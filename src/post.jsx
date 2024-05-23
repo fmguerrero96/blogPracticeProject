@@ -1,17 +1,19 @@
-export default function Post () {
+import { format } from "date-fns"
+
+export default function Post ({title, cover, summary, createdAt, author}) {  
     return(
         <div className="post">
           <div className="image">
-            <img src="https://assets-global.website-files.com/614716f50b4f49202fdd0087/6229b0f7cf6b6325a4f9ac6d_shopify-review-shopify-ecommerce-platform%20(1).jpg" alt="" />
+            <img src={'http://localhost:4000/'+cover} alt="" />
           </div>
           <div className="texts">
-            <h2>Shopify shares plunge 18% on weak guidance</h2>
+            <h2>{title}</h2>
             <p className="info">
-              <a className='author' href="">John Doe</a>
-              <time dateTime="2024-05-08 21:45">2024-05-08 21:45</time>
+              <a className='author' href="">{author.username}</a>
+              <time>{format(createdAt, 'MMM d, yyyy HH:mm') }</time>
             </p>
             <p className='summary'>
-              Shopify shares tumbled 18% on Wednesday, shaving almost $20 billion off the company’s value, after the company gave revenue and profit guidance for the current quarter that spooked investors.
+              {summary}
             </p>
           </div>
         </div>
