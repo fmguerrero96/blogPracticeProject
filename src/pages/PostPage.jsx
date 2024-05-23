@@ -12,7 +12,16 @@ export default function PostPage() {
                 })
         })
     }, [])
+
+    if(!postInfo){return ('postPage')}
+
     return(
-        <div>Post Page</div>
+        <div className="postPage">
+            <div className="image">
+                <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+            </div>
+            <h1>{postInfo.title}</h1>
+            <div dangerouslySetInnerHTML={{__html:postInfo.content}}/>
+        </div>
     )
 };
