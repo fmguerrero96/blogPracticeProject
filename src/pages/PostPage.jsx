@@ -16,11 +16,13 @@ export default function PostPage() {
     if(!postInfo){return ('postPage')}
 
     return(
-        <div className="postPage">
+        <div className="post-page">
+            <h1>{postInfo.title}</h1>
+            <time>{postInfo.createdAt}</time>
+            <div className="author">By: {postInfo.author.username}</div>
             <div className="image">
                 <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
             </div>
-            <h1>{postInfo.title}</h1>
             <div dangerouslySetInnerHTML={{__html:postInfo.content}}/>
         </div>
     )
