@@ -7,6 +7,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a{
+    cursor: pointer;
+}
+
 img{
     max-width: 100% ;
 }
@@ -94,6 +98,7 @@ button{
     color: white;
     border-radius: 5px;
     padding: 7px 0;  
+    cursor: pointer;
 }
 
 form.login h1, form.register h1{
