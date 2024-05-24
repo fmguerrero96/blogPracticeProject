@@ -24,7 +24,7 @@ export default function CreatePost(){
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [files, setFiles] = useState('');
-    const [redsirect, setRedirect] = useState(false)
+    const [redirect, setRedirect] = useState(false)
 
     const createNewPost = async function(e){
         const data = new FormData();
@@ -45,7 +45,7 @@ export default function CreatePost(){
         }
     };
 
-    if(redsirect){
+    if(redirect){
         return(
             <Navigate to={'/'}/>
         )
