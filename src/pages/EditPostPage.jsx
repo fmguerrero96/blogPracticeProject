@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import Editor from '../Editor';
 
@@ -10,14 +10,41 @@ export default function EditPostPage() {
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false)
 
-    const updatePost = function(e){
-        e.preventDefault()
+    useEffect(() => {
+        fetch(`http://localhost:4000/post/${id}`).then(response => {
+            response.json().then(postInfo => {
+                setTitle(postInfo.title)
+                setContent(postInfo.content)
+                setSummary(postInfo.summary)
+            })
+        })
+    },[])
 
+    const updatePost = async function(e){
+        e.preventDefault()
+        const data = new FormData();
+        data.set('title', title)
+        data.set('summary', summary)
+        data.set('content', content)
+        data.set('id', id)
+        if(files?.[0]) {
+            data.set('file', files?.[0])
+        }
+        
+
+        const response = await fetch(`http://localhost:4000/post`, {
+            method: 'PUT',
+            body: data,
+            credentials: 'include'
+        })
+        if(response.ok){
+            setRedirect(true)
+        }
     }
     
     if(redirect){
         return(
-            <Navigate to={'/'}/>
+            <Navigate to={`/post/${id}`}/>
         )
     }
     
@@ -34,7 +61,7 @@ export default function EditPostPage() {
             <input type="file" 
                 onChange={e => setFiles(e.target.files)} />
             <Editor onChange={setContent} value={content}/>
-            <button style={{marginTop: '5px'}}>Create Post</button>
+            <button style={{marginTop: '5px'}}>Update Post</button>
         </form>
     )
 }
